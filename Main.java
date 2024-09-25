@@ -1,37 +1,13 @@
-class Tarefa {
-    private String titulo;
-    private String descricao;
-    private String prazo;
-    private int prioridade;
+public class Main {
+    public static void main(String[] args){
+        Tarefa tarefa1 = new Tarefa("Estudar POO", "Revisar os conceitos de classes e objetos", "2024-15-48", 1);
+        Tarefa tarefa2 = new Tarefa("Estudar para provas", "2050-10-25");
 
-    //Construtor
-    public Tarefa(String titulo, String descricao, String prazo, int prioridade) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.prazo = prazo;
-        this.prioridade = prioridade; 
-    }
+        System.out.println("=============== Tarefa Comum ===============");
+        tarefa1.executarTarefa();
 
-    // Método Get e Set
-    public String getTitulo(){
-        return this.titulo;
-    }
-
-    public void setTitulo(String titulo){
-        this.titulo = titulo;
-    }
-}
-
-
-
-public class Main{
-
-    public static void main (String[] args){
-        Tarefa tarefa1= new Tarefa("Estudar POO", "Revisar conceitos de classes e objetos", "04-09-2024",
-         1);
-        System.out.println("Titulo:" + tarefa1.getTitulo());
-        tarefa1.setTitulo("Estudar Lógica de Programação");
-        System.out.println("Titulo:" + tarefa1.getTitulo());
+        tarefa2.cancelarTarefa();
+        
 
     }
 }
